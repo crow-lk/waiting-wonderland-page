@@ -179,6 +179,7 @@ export default function Index() {
           font-weight: 300;
           line-height: 1.7;
           letter-spacing: 0.02em;
+          margin-top: 1.25rem;
         }
 
         .countdown-wrapper {
