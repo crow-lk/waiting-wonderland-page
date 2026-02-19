@@ -43,7 +43,7 @@ export default function Index() {
             left: `${p.x}%`,
             width: p.size,
             height: p.size,
-            background: `radial-gradient(circle, hsl(285 95% 75% / ${p.opacity}), hsl(300 85% 70% / ${p.opacity * 0.5}))`,
+            background: `radial-gradient(circle, hsl(272 58% 65% / ${p.opacity}), hsl(272 50% 55% / ${p.opacity * 0.5}))`,
             animationDuration: `${p.duration}s`,
             animationDelay: `${p.delay}s`,
             position: "absolute",
@@ -108,19 +108,19 @@ export default function Index() {
         }
         .orb-1 {
           width: 500px; height: 500px;
-          background: hsl(276 90% 55% / 0.25);
+          background: hsl(272 58% 52% / 0.25);
           top: -15%; left: -10%;
           animation: float 8s ease-in-out infinite;
         }
         .orb-2 {
           width: 400px; height: 400px;
-          background: hsl(300 85% 65% / 0.2);
+          background: hsl(272 50% 45% / 0.2);
           bottom: -15%; right: -10%;
           animation: float 10s ease-in-out infinite reverse;
         }
         .orb-3 {
           width: 300px; height: 300px;
-          background: hsl(260 80% 60% / 0.15);
+          background: hsl(265 55% 55% / 0.15);
           top: 40%; left: 60%;
           animation: float 7s ease-in-out infinite 2s;
         }
@@ -129,7 +129,7 @@ export default function Index() {
           position: absolute;
           width: 600px; height: 600px;
           border-radius: 50%;
-          border: 1px solid hsl(276 90% 65% / 0.08);
+          border: 1px solid hsl(272 58% 52% / 0.08);
           animation: spin-slow 20s linear infinite;
           pointer-events: none;
         }
@@ -237,7 +237,7 @@ export default function Index() {
           display: block;
           width: 8px; height: 8px;
           border-radius: 50%;
-          background: linear-gradient(135deg, hsl(276 90% 65%), hsl(300 85% 70%));
+          background: linear-gradient(135deg, hsl(272 58% 52%), hsl(272 50% 65%));
           animation: pulse-glow 2s ease-in-out infinite;
         }
 
