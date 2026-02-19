@@ -186,8 +186,9 @@ export default function Index() {
           font-size: clamp(2.5rem, 8vw, 4.5rem);
           font-weight: 700;
           letter-spacing: -0.02em;
-          line-height: 1.1;
+          line-height: 1.2;
           margin-bottom: 0.75rem;
+          padding-bottom: 0.15em;
         }
 
         .coming-soon-subtitle {

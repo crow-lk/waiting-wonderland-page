@@ -106,7 +106,7 @@ All colors MUST be HSL.
 .animate-spin-slow { animation: spin-slow 20s linear infinite; }
 
 .shimmer-text {
-  background: linear-gradient(90deg, hsl(276 90% 80%), hsl(300 85% 85%), hsl(276 90% 80%));
+  background: linear-gradient(90deg, hsl(0 0% 100%), hsl(272 60% 88%), hsl(0 0% 100%));
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
