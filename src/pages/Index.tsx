@@ -43,7 +43,7 @@ export default function Index() {
             left: `${p.x}%`,
             width: p.size,
             height: p.size,
-            background: `radial-gradient(circle, hsl(272 58% 65% / ${p.opacity}), hsl(272 50% 55% / ${p.opacity * 0.5}))`,
+            background: `radial-gradient(circle, hsl(272 58% 70% / ${p.opacity}), hsl(38 85% 65% / ${p.opacity * 0.4}))`,
             animationDuration: `${p.duration}s`,
             animationDelay: `${p.delay}s`,
             position: "absolute",
@@ -107,21 +107,21 @@ export default function Index() {
           pointer-events: none;
         }
         .orb-1 {
-          width: 500px; height: 500px;
-          background: hsl(272 58% 52% / 0.25);
-          top: -15%; left: -10%;
+          width: 550px; height: 550px;
+          background: radial-gradient(circle, hsl(272 58% 52% / 0.3), hsl(240 50% 40% / 0.1));
+          top: -20%; left: -12%;
           animation: float 8s ease-in-out infinite;
         }
         .orb-2 {
-          width: 400px; height: 400px;
-          background: hsl(272 50% 45% / 0.2);
-          bottom: -15%; right: -10%;
+          width: 450px; height: 450px;
+          background: radial-gradient(circle, hsl(38 85% 58% / 0.18), hsl(20 70% 45% / 0.06));
+          bottom: -18%; right: -12%;
           animation: float 10s ease-in-out infinite reverse;
         }
         .orb-3 {
-          width: 300px; height: 300px;
-          background: hsl(265 55% 55% / 0.15);
-          top: 40%; left: 60%;
+          width: 350px; height: 350px;
+          background: radial-gradient(circle, hsl(210 60% 50% / 0.15), hsl(240 50% 35% / 0.05));
+          top: 35%; left: 55%;
           animation: float 7s ease-in-out infinite 2s;
         }
 
@@ -174,7 +174,7 @@ export default function Index() {
         }
 
         .coming-soon-subtitle {
-          color: hsl(276 20% 75%);
+          color: hsl(228 20% 72%);
           font-size: clamp(0.95rem, 2.5vw, 1.125rem);
           font-weight: 300;
           line-height: 1.7;
