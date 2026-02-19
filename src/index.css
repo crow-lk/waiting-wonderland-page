@@ -19,49 +19,49 @@ All colors MUST be HSL.
     --popover: 276 60% 12%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 276 90% 65%;
+    --primary: 272 58% 52%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 290 60% 55%;
+    --secondary: 272 45% 45%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 276 40% 18%;
-    --muted-foreground: 276 20% 70%;
+    --muted: 272 30% 18%;
+    --muted-foreground: 272 20% 70%;
 
-    --accent: 300 80% 70%;
+    --accent: 272 65% 65%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 276 40% 22%;
-    --input: 276 40% 22%;
-    --ring: 276 90% 65%;
+    --border: 272 30% 22%;
+    --input: 272 30% 22%;
+    --ring: 272 58% 52%;
 
     --radius: 1rem;
 
     /* Brand specific */
-    --purple-deep: 270 80% 15%;
-    --purple-mid: 276 90% 50%;
-    --purple-bright: 285 95% 65%;
-    --purple-pink: 300 85% 70%;
-    --glow-color: 280 100% 70%;
+    --purple-deep: 272 60% 15%;
+    --purple-mid: 272 58% 52%;
+    --purple-bright: 272 65% 60%;
+    --purple-pink: 272 50% 65%;
+    --glow-color: 272 58% 52%;
 
-    --gradient-bg: linear-gradient(135deg, hsl(270 80% 8%) 0%, hsl(280 85% 14%) 50%, hsl(260 75% 10%) 100%);
+    --gradient-bg: linear-gradient(135deg, hsl(272 60% 8%) 0%, hsl(272 55% 14%) 50%, hsl(265 50% 10%) 100%);
     --gradient-primary: linear-gradient(135deg, hsl(var(--purple-mid)), hsl(var(--purple-pink)));
-    --gradient-logo: linear-gradient(135deg, hsl(276 90% 55%), hsl(300 80% 65%));
+    --gradient-logo: linear-gradient(135deg, hsl(272 58% 52%), hsl(272 50% 65%));
 
     --shadow-glow: 0 0 40px hsl(var(--glow-color) / 0.4), 0 0 80px hsl(var(--glow-color) / 0.2);
-    --shadow-card: 0 8px 32px hsl(276 80% 5% / 0.6);
+    --shadow-card: 0 8px 32px hsl(272 60% 5% / 0.6);
 
-    --sidebar-background: 276 80% 8%;
+    --sidebar-background: 272 60% 8%;
     --sidebar-foreground: 0 0% 90%;
-    --sidebar-primary: 276 90% 65%;
+    --sidebar-primary: 272 58% 52%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 276 60% 18%;
+    --sidebar-accent: 272 40% 18%;
     --sidebar-accent-foreground: 0 0% 90%;
-    --sidebar-border: 276 40% 22%;
-    --sidebar-ring: 276 90% 65%;
+    --sidebar-border: 272 30% 22%;
+    --sidebar-ring: 272 58% 52%;
   }
 
 }
@@ -73,8 +73,8 @@ All colors MUST be HSL.
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 30px hsl(276 90% 65% / 0.4), 0 0 60px hsl(276 90% 65% / 0.2); }
-  50% { box-shadow: 0 0 60px hsl(276 90% 65% / 0.7), 0 0 120px hsl(276 90% 65% / 0.4); }
+  0%, 100% { box-shadow: 0 0 30px hsl(272 58% 52% / 0.4), 0 0 60px hsl(272 58% 52% / 0.2); }
+  50% { box-shadow: 0 0 60px hsl(272 58% 52% / 0.7), 0 0 120px hsl(272 58% 52% / 0.4); }
 }
 
 @keyframes shimmer {
