@@ -1,12 +1,5 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import cpLogo from "@/assets/cp-logo.png";
-
-interface TimeLeft {
-  days: number;
-  hours: number;
-  minutes: number;
-  seconds: number;
-}
 
 interface Particle {
   id: number;
@@ -17,32 +10,7 @@ interface Particle {
   opacity: number;
 }
 
-const LAUNCH_DATE = new Date("2025-06-01T00:00:00");
-
-function getTimeLeft(): TimeLeft {
-  const diff = LAUNCH_DATE.getTime() - Date.now();
-  if (diff <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0 };
-  return {
-    days: Math.floor(diff / (1000 * 60 * 60 * 24)),
-    hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
-    minutes: Math.floor((diff / (1000 * 60)) % 60),
-    seconds: Math.floor((diff / 1000) % 60),
-  };
-}
-
-function CountdownUnit({ value, label }: { value: number; label: string }) {
-  return (
-    <div className="flex flex-col items-center gap-1">
-      <div className="countdown-card">
-        <span className="countdown-number">{String(value).padStart(2, "0")}</span>
-      </div>
-      <span className="countdown-label">{label}</span>
-    </div>
-  );
-}
-
 export default function Index() {
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>(getTimeLeft());
   const [particles, setParticles] = useState<Particle[]>([]);
   const [visible, setVisible] = useState(false);
 
@@ -57,9 +25,6 @@ export default function Index() {
     }));
     setParticles(ps);
     setTimeout(() => setVisible(true), 100);
-
-    const timer = setInterval(() => setTimeLeft(getTimeLeft()), 1000);
-    return () => clearInterval(timer);
   }, []);
 
   return (
@@ -105,19 +70,8 @@ export default function Index() {
           </p>
         </div>
 
-        {/* Countdown */}
-        <div style={{ animationDelay: "0.4s" }} className="animate-fade-in-up countdown-wrapper">
-          <CountdownUnit value={timeLeft.days} label="Days" />
-          <div className="countdown-dot">:</div>
-          <CountdownUnit value={timeLeft.hours} label="Hours" />
-          <div className="countdown-dot">:</div>
-          <CountdownUnit value={timeLeft.minutes} label="Minutes" />
-          <div className="countdown-dot">:</div>
-          <CountdownUnit value={timeLeft.seconds} label="Seconds" />
-        </div>
-
         {/* Divider dots */}
-        <div style={{ animationDelay: "0.6s" }} className="animate-fade-in-up dots-row">
+        <div style={{ animationDelay: "0.4s" }} className="animate-fade-in-up dots-row">
           {[0, 1, 2].map((i) => (
             <span
               key={i}
