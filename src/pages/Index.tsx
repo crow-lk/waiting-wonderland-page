@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import cpLogo from "@/assets/cp-logo.png";
+import bgHero from "@/assets/bg-hero.jpg";
 
 interface Particle {
   id: number;
@@ -28,7 +29,7 @@ export default function Index() {
   }, []);
 
   return (
-    <div className="coming-soon-root">
+    <div className="coming-soon-root" style={{ backgroundImage: `url(${bgHero})` }}>
       {/* Animated background orbs */}
       <div className="orb orb-1" />
       <div className="orb orb-2" />
@@ -91,7 +92,10 @@ export default function Index() {
         .coming-soon-root {
           min-height: 100vh;
           width: 100%;
-          background: var(--gradient-bg);
+          background-color: hsl(228 35% 7%);
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -99,6 +103,19 @@ export default function Index() {
           overflow: hidden;
           font-family: 'Inter', sans-serif;
         }
+
+        /* Dark overlay over the background image */
+        .coming-soon-root::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(135deg, hsl(228 40% 5% / 0.82) 0%, hsl(260 35% 10% / 0.75) 50%, hsl(228 35% 5% / 0.85) 100%);
+          z-index: 1;
+        }
+
+        /* Ensure orbs and content sit above the overlay */
+        .orb, .spin-ring { z-index: 2; }
+        .coming-soon-content { z-index: 10; }
 
         .orb {
           position: absolute;
